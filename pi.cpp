@@ -30,7 +30,12 @@ int main() {
 
         auto res = calcPI(iterations);
 
-        std::cout << "The approximate value of pi using " << iterations + 1 << " terms is: ";
+        if (iterations == 0) {
+            std::cout << "The approximate value of pi using 1 term is: ";
+        } else {
+            std::cout << "The approximate value of pi using " << iterations + 1 << " terms is: ";
+        }
+        
         std::cout.setf(std::ios::fixed);
         std::cout.setf(std::ios::showpoint);
         std::cout.precision(3);

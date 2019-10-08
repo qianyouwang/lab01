@@ -1,17 +1,22 @@
 #include <iostream>
 
 int main() {
-    std::cout << "Enter number of rows and columns:" << std::endl;
-
     int row, col;
-    std::cin >> row >> col;
 
-    for (int i = 0; i < row; i++) {
-        for (int j = 0; j < col; j++) {
-            std::cout << "X.";
+    while (true) {
+        std::cout << "Enter number of rows and columns:" << std::endl;
+
+        std::cin >> row >> col;
+
+        if (row < 1 || col < 1) {
+            return 0;
         }
-        std::cout << std::endl;
-    }
 
-    return 0;
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                std::cout << "X.";
+            }
+            std::cout << std::endl;
+        }
+    }
 }
